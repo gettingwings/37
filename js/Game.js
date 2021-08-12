@@ -18,7 +18,9 @@ class Game {
   async start(){
     if(gameState === 0){
       player = new Player();
+
       var playerCountRef = await database.ref('playerCount').once("value");
+
       if(playerCountRef.exists()){
         playerCount = playerCountRef.val();
         player.getCount();
@@ -38,7 +40,7 @@ class Game {
       var display_position = 130;
       for(var plr in allPlayers){
         if (plr === "player" + player.index)
-          fill("red")
+          {fill("red")}
         else
           fill("black");
 
@@ -49,7 +51,7 @@ class Game {
     }
 
     if(keyIsDown(UP_ARROW) && player.index !== null){
-      player.distance +=50
+      player.distance += 50
       player.update();
     }
   }

@@ -35,8 +35,18 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
 
-  <body>
+  <body onload='clearDB()'>
     <script src="sketch.js"></script>
+    <script>
+      function clearDB() {
+        alert("DB cleared");
+        database.ref('/').update({
+          'playerCount':0,
+          'gameState':0
+        })
+        database.ref('players').remove()
+      }
+      </script>
   </body>
   
 </html>

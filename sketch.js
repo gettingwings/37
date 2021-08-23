@@ -1,9 +1,8 @@
 var canvas, backgroundImage;
 
-var gameState = 0;
+var gameState;
 var playerCount;
-var allPlayers;
-var distance = 0;
+var allPlayers;//undefined
 var database;
 
 var form, player, game;
@@ -28,3 +27,4 @@ function draw(){
     game.play();
   }
 }
+

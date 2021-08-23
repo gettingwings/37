@@ -39,7 +39,7 @@ class Game {
     if(allPlayers !== undefined){
       var display_position = 130;
       for(var plr in allPlayers){
-        if (plr === "player" + player.index)
+        if (plr === "player" + player.index)    // player1 === player1
           {fill("red")}
         else
           fill("black");
